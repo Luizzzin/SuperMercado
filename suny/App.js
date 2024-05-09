@@ -1,13 +1,12 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import Routes from './routes';
+import { createStackNavigator } from '@react-navigation/stack';
+import Routes from './routes'; // Importe o componente Routes
+
+const Stack = createStackNavigator();
 
 const App = () => {
-  return (
-    <NavigationContainer>
-      <Routes />
-    </NavigationContainer>
-  );
-};
+  return <Routes />;
+}
 
 export default App;
