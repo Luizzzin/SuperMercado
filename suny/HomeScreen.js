@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     paddingTop: 0,
   },
   logo: {
-    width: 95,
+    width: 9i5,
     height: 50,
     right: 130,
     top: 40,
@@ -144,8 +144,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   productCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
     marginBottom: 20,
-    backgroundColor: 'white',
+    backgroundColor: '#B91723',
     borderRadius: 10,
     padding: 10,
   },
@@ -156,7 +158,7 @@ const styles = StyleSheet.create({
   },
   productName: {
     marginTop: 10,
-    fontSize: 18,
+    fontSize: 36,
     fontWeight: 'bold',
   },
   productPrice: {
@@ -175,7 +177,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   productDescription: {
-    
+    flex : 1,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'column',
   }
 });
 
