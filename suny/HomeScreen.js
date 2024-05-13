@@ -63,8 +63,8 @@ const HomeScreen = () => {
           <TouchableOpacity key={product.id} style={styles.productCard}>
             <Image source={product.image} style={styles.productImage} />
             <View style={styles.productDescription}>
-            <Text style={styles.productName}>{product.name}</Text>
-            <Text style={styles.productPrice}>R$ {product.price.toFixed(2)}</Text>
+              <Text style={styles.productName}>{product.name}</Text>
+              <Text style={styles.productPrice}>R$ {product.price.toFixed(2)}</Text>
             </View>
           </TouchableOpacity>
         ))}
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     paddingTop: 0,
   },
   logo: {
-    width: 9i5,
+    width: 95,
     height: 50,
     right: 130,
     top: 40,
@@ -155,33 +155,44 @@ const styles = StyleSheet.create({
     width: '45%',
     height: 190,
     borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
+},
   productName: {
-    marginTop: 10,
-    fontSize: 36,
-    fontWeight: 'bold',
-  },
+  marginTop: 10,
+  fontSize: 36,
+  fontWeight: 'bold',
+  color: 'yellow',
+},
   productPrice: {
-    marginTop: 5,
-    fontSize: 16,
-    color: '#6F0D15',
-  },
+  marginTop: 5,
+  fontSize: 24,
+  fontWeight: 'bold',
+  color: '#6F0D15',
+},
   tabBar: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    backgroundColor: '#5A1217',
-    paddingVertical: 10,
-  },
+  flexDirection: 'row',
+  justifyContent: 'space-around',
+  backgroundColor: '#5A1217',
+  paddingVertical: 10,
+},
   tabItem: {
-    flex: 1,
-    alignItems: 'center',
-  },
+  flex: 1,
+  alignItems: 'center',
+},
   productDescription: {
-    flex : 1,
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    flexDirection: 'column',
-  }
+  flex: 1,
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  flexDirection: 'column',
+}
 });
 
 export default HomeScreen;
