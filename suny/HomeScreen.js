@@ -62,8 +62,10 @@ const HomeScreen = () => {
         {products.map(product => (
           <TouchableOpacity key={product.id} style={styles.productCard}>
             <Image source={product.image} style={styles.productImage} />
+            <View style={styles.productDescription}>
             <Text style={styles.productName}>{product.name}</Text>
             <Text style={styles.productPrice}>R$ {product.price.toFixed(2)}</Text>
+            </View>
           </TouchableOpacity>
         ))}
       </ScrollView>
@@ -148,8 +150,8 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   productImage: {
-    width: '100%',
-    height: 150,
+    width: '45%',
+    height: 190,
     borderRadius: 10,
   },
   productName: {
@@ -172,6 +174,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
+  productDescription: {
+    
+  }
 });
 
 export default HomeScreen;
