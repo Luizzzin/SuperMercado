@@ -154,17 +154,9 @@ const styles = StyleSheet.create({
   productImage: {
     width: '45%',
     height: 190,
-    borderRadius: 10,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.5,
-    shadowRadius: 3.84,
-    elevation: 5,
+    marginRight: 10,
+    borderRadius: 5,
   },
-},
   productName: {
   marginTop: 10,
   fontSize: 36,
