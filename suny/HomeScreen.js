@@ -65,6 +65,7 @@ const HomeScreen = () => {
             <View style={styles.productDescription}>
               <Text style={styles.productName}>{product.name}</Text>
               <Text style={styles.productPrice}>R$ {product.price.toFixed(2)}</Text>
+              View
             </View>
           </TouchableOpacity>
           </View>
@@ -149,7 +150,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#B91723',
-    borderRadius: 10,
+    borderRadius: 20,
     padding: 10,
     width: '90%'
   },
