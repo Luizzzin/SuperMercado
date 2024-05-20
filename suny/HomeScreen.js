@@ -65,11 +65,11 @@ const HomeScreen = () => {
               <View style={styles.productDescription}>
                 <Text style={styles.productName}>{product.name}</Text>
                 <Text style={styles.productPrice}>R$ {product.price.toFixed(2)}</Text>
-                <View>
-                  <Text style={styles.TextoBotao}>
-                    Adicionar Ao Carrinho
-                  </Text>
-                </View>
+
+                <Text style={styles.TextoBotao}>
+                  Adicionar Ao Carrinho
+                </Text>
+
               </View>
             </TouchableOpacity>
           </View>
@@ -153,6 +153,7 @@ const styles = StyleSheet.create({
   productCard: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: '#B91723',
     borderRadius: 20,
     padding: 15,
@@ -160,8 +161,8 @@ const styles = StyleSheet.create({
   },
   productImage: {
     width: '45%',
-    height: '95%',
-    marginRight: 10,
+    height: 185,
+    // marginRight: 10,
     borderRadius: 5,
   },
   productName: {
@@ -206,9 +207,14 @@ const styles = StyleSheet.create({
   },
   // botao de compra
   TextoBotao: {
-    width: '95%',
-    height: '5%',
-    backgroundColor: '#FF0000'
+    flex: 1,
+    width: '99%',
+    height: '10%',
+    backgroundColor: '#FF0000',
+    marginLeft: 15,
+    marginTop: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 
