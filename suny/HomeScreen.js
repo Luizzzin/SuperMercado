@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, Image, ScrollView } from 'react-native';
-import { AntDesign, FontAwesome } from '@expo/vector-icons'; // Certifique-se de instalar o pacote expo-vector-icons
+import { AntDesign, FontAwesome } from '@expo/vector-icons';
 import Highlighter from 'react-native-highlighter';
 
 const HomeScreen = () => {
@@ -23,8 +23,6 @@ const HomeScreen = () => {
     { id: 5, name: 'Produto 5', price: 50, image: require('./path/to/image1.png') },
     { id: 6, name: 'Produto 6', price: 60, image: require('./path/to/image1.png') },
   ];
-
-  const keywords = ["Produto", "10"];
 
   return (
     <View style={styles.container}>
@@ -50,10 +48,10 @@ const HomeScreen = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Category Carousel */}
+      {/* Carrossel de Categorias */}
       <ScrollView horizontal style={styles.carousel}>
-        {categories.map((category, index) => (
-          <TouchableOpacity key={index} style={styles.categoryItem}>
+        {categories.map(category => (
+          <TouchableOpacity key={category.id} style={styles.categoryItem}>
             <Image source={category.image} style={styles.categoryImage} />
             <Text style={styles.categoryText}>{category.name}</Text>
           </TouchableOpacity>
@@ -66,12 +64,7 @@ const HomeScreen = () => {
           <TouchableOpacity key={product.id} style={styles.productCard}>
             <Image source={product.image} style={styles.productImage} />
             <View style={styles.productDescription}>
-            <Highlighter
-                highlightStyle={styles.highlight}
-                searchWords={keywords}
-                textToHighlight={product.name}
-                style={styles.productName}
-              />
+              <Text style={styles.productName}>{product.name}</Text>
               <Text style={styles.productPrice}>R$ {product.price.toFixed(2)}</Text>
             </View>
           </TouchableOpacity>
@@ -104,19 +97,18 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 10,
-    paddingTop: 0,
+    paddingTop: 10,
   },
   logo: {
     width: 95,
     height: 50,
-    right: 130,
-    top: 40,
+    resizeMode: 'contain',
   },
   searchBar: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 20,
-    marginTop: 75,
+    marginTop: 20,
   },
   input: {
     flex: 1,
@@ -127,16 +119,18 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   carousel: {
-    marginTop: 20,
+    marginTop: 30,
     paddingHorizontal: 20,
-    marginBottom: 20,
+    marginBottom: 30,
+    height: 600,
   },
   categoryItem: {
     marginRight: 10,
     padding: 10,
-    backgroundColor: 'white',
+    backgroundColor: '#B91723',
     borderRadius: 7,
     alignItems: 'center',
+    width: 200,
   },
   categoryImage: {
     width: 100,
@@ -145,7 +139,8 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   categoryText: {
-    color: '#6F0D15',
+    color: 'white',
+    fontWeight: 'bold',
     fontSize: 16,
   },
   productContainer: {
@@ -155,7 +150,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 20,
-    backgroundColor: '#FFF',
+    backgroundColor: '#B91723',
     borderRadius: 10,
     padding: 10,
   },
@@ -169,33 +164,31 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 26,
     fontWeight: 'bold',
-    color: '#6F0D15',
+    color: '#fff',
   },
-  highlight: {
-    backgroundColor: '#6F0D15',
-  },
+  
   productPrice: {
-  marginTop: 5,
-  fontSize: 34,
-  fontWeight: 'bold',
-  color: 'yellow',
-},
+    marginTop: 5,
+    fontSize: 34,
+    fontWeight: 'bold',
+    color: 'yellow',
+  },
   tabBar: {
-  flexDirection: 'row',
-  justifyContent: 'space-around',
-  backgroundColor: '#5A1217',
-  paddingVertical: 10,
-},
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor: '#5A1217',
+    paddingVertical: 10,
+  },
   tabItem: {
-  flex: 1,
-  alignItems: 'center',
-},
+    flex: 1,
+    alignItems: 'center',
+  },
   productDescription: {
-  flex: 1,
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  flexDirection: 'column',
-}
+    flex: 1,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'column',
+  }
 });
 
 export default HomeScreen;
