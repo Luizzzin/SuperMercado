@@ -10,9 +10,9 @@ const HomeScreen = () => {
     { id: 2, image: require('./path/to/image2.png') },
     { id: 3, image: require('./path/to/image3.png') },
     { id: 4, image: require('./path/to/image4.png') },
-    { id: 5, image: require('./path/to/image5.png') } 
+    { id: 5, image: require('./path/to/image5.png') }
   ];
-  
+
   const products = [
     { id: 1, name: 'Produto 1', price: 10, image: require('./path/to/image1.png') },
     { id: 2, name: 'Produto 2', price: 20, image: require('./path/to/image1.png') },
@@ -60,14 +60,18 @@ const HomeScreen = () => {
       <ScrollView style={styles.productContainer}>
         {products.map(product => (
           <View style={styles.quadradoLaranja}>
-          <TouchableOpacity key={product.id} style={styles.productCard}>
-            <Image source={product.image} style={styles.productImage} />
-            <View style={styles.productDescription}>
-              <Text style={styles.productName}>{product.name}</Text>
-              <Text style={styles.productPrice}>R$ {product.price.toFixed(2)}</Text>
-              View
-            </View>
-          </TouchableOpacity>
+            <TouchableOpacity key={product.id} style={styles.productCard}>
+              <Image source={product.image} style={styles.productImage} />
+              <View style={styles.productDescription}>
+                <Text style={styles.productName}>{product.name}</Text>
+                <Text style={styles.productPrice}>R$ {product.price.toFixed(2)}</Text>
+                <View>
+                  <Text style={styles.TextoBotao}>
+                    Adicionar Ao Carrinho
+                  </Text>
+                </View>
+              </View>
+            </TouchableOpacity>
           </View>
         ))}
       </ScrollView>
@@ -144,19 +148,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   productContainer: {
-  
+
   },
   productCard: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#B91723',
     borderRadius: 20,
-    padding: 10,
-    width: '90%'
+    padding: 15,
+    width: '95%'
   },
   productImage: {
     width: '45%',
-    height: 190,
+    height: '95%',
     marginRight: 10,
     borderRadius: 5,
   },
@@ -166,7 +170,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
   },
-  
+
   productPrice: {
     marginTop: 5,
     fontSize: 34,
@@ -189,6 +193,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'column',
   },
+  // quadrado em volta dos produtos para dar um destaque
   quadradoLaranja: {
     width: '100%',
     height: 250,
@@ -198,7 +203,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderTopLeftRadius: 50,
     borderBottomRightRadius: 50,
-  }
+  },
+  // botao de compra
+  TextoBotao: {
+    width: '95%',
+    height: '5%',
+    backgroundColor: '#FF0000'
+  },
 });
 
 export default HomeScreen;
