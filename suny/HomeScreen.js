@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, Image, ScrollView } from 'react-native';
 import { AntDesign, FontAwesome } from '@expo/vector-icons'; // Certifique-se de instalar o pacote expo-vector-icons
+import Highlighter from 'react-native-highlighter';
 
 const HomeScreen = () => {
 
@@ -22,6 +23,8 @@ const HomeScreen = () => {
     { id: 5, name: 'Produto 5', price: 50, image: require('./path/to/image1.png') },
     { id: 6, name: 'Produto 6', price: 60, image: require('./path/to/image1.png') },
   ];
+
+  const keywords = ["Produto", "10"];
 
   return (
     <View style={styles.container}>
@@ -63,7 +66,12 @@ const HomeScreen = () => {
           <TouchableOpacity key={product.id} style={styles.productCard}>
             <Image source={product.image} style={styles.productImage} />
             <View style={styles.productDescription}>
-              <Text style={styles.productName}>{product.name}</Text>
+            <Highlighter
+                highlightStyle={styles.highlight}
+                searchWords={keywords}
+                textToHighlight={product.name}
+                style={styles.productName}
+              />
               <Text style={styles.productPrice}>R$ {product.price.toFixed(2)}</Text>
             </View>
           </TouchableOpacity>
