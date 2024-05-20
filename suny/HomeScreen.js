@@ -6,15 +6,13 @@ import Highlighter from 'react-native-highlighter';
 const HomeScreen = () => {
 
   const categories = [
-    { id: 1, name: 'Categoria 1', image: require('./path/to/image1.png') },
-    { id: 2, name: 'Categoria 2', image: require('./path/to/image1.png') },
-    { id: 3, name: 'Categoria 3', image: require('./path/to/image1.png') },
-    { id: 4, name: 'Categoria 4', image: require('./path/to/image1.png') },
-    { id: 5, name: 'Categoria 5', image: require('./path/to/image1.png') },
-    { id: 6, name: 'Categoria 6', image: require('./path/to/image1.png') },
-    { id: 7, name: 'Categoria 7', image: require('./path/to/image1.png') }
+    { id: 1, image: require('./path/to/image1.png') },
+    { id: 2, image: require('./path/to/image2.png') },
+    { id: 3, image: require('./path/to/image3.png') },
+    { id: 4, image: require('./path/to/image4.png') },
+    { id: 5, image: require('./path/to/image5.png') } 
   ];
-
+  
   const products = [
     { id: 1, name: 'Produto 1', price: 10, image: require('./path/to/image1.png') },
     { id: 2, name: 'Produto 2', price: 20, image: require('./path/to/image1.png') },
@@ -61,6 +59,7 @@ const HomeScreen = () => {
       {/* Product Cards */}
       <ScrollView style={styles.productContainer}>
         {products.map(product => (
+          <View style={styles.quadradoLaranja}>
           <TouchableOpacity key={product.id} style={styles.productCard}>
             <Image source={product.image} style={styles.productImage} />
             <View style={styles.productDescription}>
@@ -68,6 +67,7 @@ const HomeScreen = () => {
               <Text style={styles.productPrice}>R$ {product.price.toFixed(2)}</Text>
             </View>
           </TouchableOpacity>
+          </View>
         ))}
       </ScrollView>
 
@@ -130,13 +130,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#B91723',
     borderRadius: 7,
     alignItems: 'center',
+    justifyContent: 'center',
     width: 200,
   },
   categoryImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 7,
-    marginBottom: 5,
+    width: '100%',
+    height: '100%',
   },
   categoryText: {
     color: 'white',
@@ -144,15 +143,15 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   productContainer: {
-    paddingHorizontal: 20,
+  
   },
   productCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 20,
     backgroundColor: '#B91723',
     borderRadius: 10,
     padding: 10,
+    width: '90%'
   },
   productImage: {
     width: '45%',
@@ -188,6 +187,16 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'column',
+  },
+  quadradoLaranja: {
+    width: '100%',
+    height: 250,
+    backgroundColor: '#FF8517',
+    marginBottom: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderTopLeftRadius: 50,
+    borderBottomRightRadius: 50,
   }
 });
 
