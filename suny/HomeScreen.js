@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'column',
-
+    height: '100%'
   },
   // quadrado em volta dos produtos para dar um destaque
   quadradoLaranja: {
@@ -211,11 +211,9 @@ const styles = StyleSheet.create({
   },
   // botao de compra
   TextoBotao: {
-    flex: 1,
     width: '95%',
-    height: '45%',
+    height: '20%',
     backgroundColor: '#FF0000',
-    
     marginTop: 10,
     alignItems: 'center',
     justifyContent: 'center',
