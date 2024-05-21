@@ -65,10 +65,12 @@ const HomeScreen = () => {
               <View style={styles.productDescription}>
                 <Text style={styles.productName}>{product.name}</Text>
                 <Text style={styles.productPrice}>R$ {product.price.toFixed(2)}</Text>
+                <View style={styles.TextoBotao}>
+                  <Text style={styles.BotaoTexto}>
+                    Adicionar Ao Carrinho
+                  </Text>
+                </View>
 
-                <Text style={styles.TextoBotao}>
-                  Adicionar Ao Carrinho
-                </Text>
 
               </View>
             </TouchableOpacity>
@@ -177,6 +179,7 @@ const styles = StyleSheet.create({
     fontSize: 34,
     fontWeight: 'bold',
     color: 'yellow',
+    marginBottom: 20,
   },
   tabBar: {
     flexDirection: 'row',
@@ -193,6 +196,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'column',
+
   },
   // quadrado em volta dos produtos para dar um destaque
   quadradoLaranja: {
@@ -208,11 +212,11 @@ const styles = StyleSheet.create({
   // botao de compra
   TextoBotao: {
     flex: 1,
-    width: '99%',
-    height: '10%',
+    width: '95%',
+    height: '45%',
     backgroundColor: '#FF0000',
-    marginLeft: 15,
-    marginTop: 30,
+    
+    marginTop: 10,
     alignItems: 'center',
     justifyContent: 'center',
   },
