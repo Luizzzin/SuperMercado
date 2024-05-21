@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
   productImage: {
     width: '45%',
     height: 185,
-    // marginRight: 10,
+    marginRight: 10,
     borderRadius: 5,
   },
   productName: {
@@ -196,7 +196,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'column',
-    height: '100%'
+    height: '90%',
+    marginTop: 60,
   },
   // quadrado em volta dos produtos para dar um destaque
   quadradoLaranja: {
