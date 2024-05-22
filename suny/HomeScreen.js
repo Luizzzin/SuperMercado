@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, Image, ScrollView } from 'react-native';
 import { AntDesign, FontAwesome } from '@expo/vector-icons';
-import Highlighter from 'react-native-highlighter';
 
 const HomeScreen = () => {
 
@@ -65,11 +64,11 @@ const HomeScreen = () => {
               <View style={styles.productDescription}>
                 <Text style={styles.productName}>{product.name}</Text>
                 <Text style={styles.productPrice}>R$ {product.price.toFixed(2)}</Text>
-                <View style={styles.TextoBotao}>
+                <TouchableOpacity style={styles.TextoBotao}>
                   <Text style={styles.BotaoTexto}>
                     Adicionar Ao Carrinho
                   </Text>
-                </View>
+                </TouchableOpacity>
 
 
               </View>
