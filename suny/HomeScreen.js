@@ -159,7 +159,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#B91723',
     borderRadius: 20,
     padding: 15,
-    width: '95%'
+    width: '95%',
+    shadowColor: '#000',
+    shadowOffset: { width: 2, height: 2 },
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
+    elevation: 1,
   },
   productImage: {
     width: '45%',
@@ -179,7 +184,7 @@ const styles = StyleSheet.create({
     fontSize: 34,
     fontWeight: 'bold',
     color: 'yellow',
-    marginBottom: 20,
+    marginBottom: 30,
   },
   tabBar: {
     flexDirection: 'row',
@@ -196,29 +201,43 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'column',
-    height: '90%',
+    height: '95%',
     marginTop: 60,
   },
   // quadrado em volta dos produtos para dar um destaque
   quadradoLaranja: {
     width: '100%',
-    height: 250,
+    height: 270,
     backgroundColor: '#FF8517',
     marginBottom: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    borderTopLeftRadius: 50,
-    borderBottomRightRadius: 50,
+    borderTopLeftRadius: 35,
+    borderBottomRightRadius: 35,
   },
   // botao de compra
   TextoBotao: {
     width: '95%',
-    height: '20%',
+    height: '25%',
     backgroundColor: '#FF0000',
-    marginTop: -10,
+    // marginTop: -10,
     alignItems: 'center',
     justifyContent: 'center',
+    borderRadius: 10,
   },
+  BotaoTexto: {
+    fontWeight: 'bold',
+    color: 'yellow',
+    // shadowColor: '#000',
+    // shadowOffset: { width: 0, height: 2 },
+    // shadowOpacity: 0.5,
+    // shadowRadius: 2,
+    // elevation: 2,
+    textShadowColor: '#000',
+    textShadowOffset: { width: 0.5, height: 0.5 },
+    textShadowRadius: 3,
+
+  }
 });
 
 export default HomeScreen;
