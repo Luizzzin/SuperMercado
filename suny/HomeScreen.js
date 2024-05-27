@@ -99,16 +99,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#6F0D15',
   },
   header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 10,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'start',
+    // paddingHorizontal: 10,
     paddingTop: 10,
   },
   logo: {
-    width: 95,
-    height: 50,
+    width: 115,
+    height: 70,
     resizeMode: 'contain',
+    marginLeft: 20,
+    marginTop: 20,
   },
   searchBar: {
     flexDirection: 'row',
@@ -122,13 +124,13 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingVertical: 10,
     paddingHorizontal: 20,
-    marginRight: 10,
+    // marginRight: 10,
   },
   carousel: {
-    marginTop: 30,
+    marginTop: 20,
     paddingHorizontal: 20,
-    marginBottom: 30,
-    height: 600,
+    marginBottom: 20,
+    height: 850,
   },
   categoryItem: {
     marginRight: 10,
@@ -138,6 +140,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: 200,
+    height: 200,
   },
   categoryImage: {
     width: '100%',
@@ -170,7 +173,7 @@ const styles = StyleSheet.create({
     height: 185,
     marginRight: 10,
     borderRadius: 5,
-  },
+  },  
   productName: {
     marginTop: 10,
     fontSize: 26,
@@ -219,7 +222,6 @@ const styles = StyleSheet.create({
     width: '95%',
     height: '25%',
     backgroundColor: '#FF0000',
-    // marginTop: -10,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
@@ -227,14 +229,9 @@ const styles = StyleSheet.create({
   BotaoTexto: {
     fontWeight: 'bold',
     color: 'yellow',
-    // shadowColor: '#000',
-    // shadowOffset: { width: 0, height: 2 },
-    // shadowOpacity: 0.5,
-    // shadowRadius: 2,
-    // elevation: 2,
     textShadowColor: '#000',
-    textShadowOffset: { width: 0.5, height: 0.5 },
-    textShadowRadius: 3,
+    textShadowOffset: { width: 0.3, height: 0.3 },
+    textShadowRadius: 2,
 
   }
 });
