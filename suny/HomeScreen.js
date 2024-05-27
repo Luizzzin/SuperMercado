@@ -59,7 +59,7 @@ const HomeScreen = () => {
       <ScrollView style={styles.productContainer}>
         {products.map(product => (
           <View style={styles.quadradoLaranja}>
-            <TouchableOpacity key={product.id} style={styles.productCard}>
+            <View key={product.id} style={styles.productCard}>
               <Image source={product.image} style={styles.productImage} />
               <View style={styles.productDescription}>
                 <Text style={styles.productName}>{product.name}</Text>
@@ -72,7 +72,7 @@ const HomeScreen = () => {
 
 
               </View>
-            </TouchableOpacity>
+            </View>
           </View>
         ))}
       </ScrollView>
