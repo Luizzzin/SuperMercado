@@ -27,11 +27,11 @@ const HomeScreen = () => {
       {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => console.log("Menu clicked")}>
-          <AntDesign name="menu-fold" size={24} color="white" />
+          
         </TouchableOpacity>
         <Image source={require('./path/to/your/logo.png')} style={styles.logo} />
         <TouchableOpacity onPress={() => console.log("Hamburger clicked")}>
-          <FontAwesome name="bars" size={24} color="white" />
+         
         </TouchableOpacity>
       </View>
 
@@ -42,7 +42,7 @@ const HomeScreen = () => {
           placeholder="Pesquisar produtos"
         />
         <TouchableOpacity onPress={() => console.log("Filter clicked")}>
-          <FontAwesome name="filter" size={24} color="white" />
+          
         </TouchableOpacity>
       </View>
 
