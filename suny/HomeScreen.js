@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, Image, ScrollView } from 'react-native';
 import { AntDesign, FontAwesome } from '@expo/vector-icons';
 
+
 const HomeScreen = () => {
 
   const categories = [
